@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="./src/output.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <div id="id1" class="wrapper box-border max-w-screen h-screen w-lg  md:w-screen bg-blue-900 ">
+     
+     <div class="m-auto md:rounded-3xl object-cover w-lg md:w-2xl flex flex-col justify-center items-center h-screen md:h-screen bg-gradient-to-r from-stone-900 to-blue-900 text-white shadow-black shadow-lg p-3 md:p-10">
+        <div class=" shadow-black rounded-2xl shadow-md p-1 md:p-5 heading text-xl md:text-3xl font-bold text-center">
+            <h1>
+              ROCK PAPER SCISSORS
+            </h1>
+            
+          </div>
+          <div class="part-2 flex flex-col gap-y-4 md:gap-y-14">
+            <div id="selectid" class="select ">
+              <div id="selectweaponid" class=" selectWeapon flex flex-col h-80 gap-y-7 md:gap-y-15 justify-center items-center ">
+                <div>
+                  <p class="font-bold text-xl">
+                 Select Your Weapon
+                </p>
+                </div>
+                <div id="wimage" class="w-lg wimage flex justify-center gap-x-7 md:gap-x-15 items-center top-0 ">
+                  <div onclick="start()" id="rock" class="choice shadow-black rounded-xl shadow-lg py-4.5 px-8 rock">
+                    <button>
+                      <img class="w-15" src="rock.png" alt="rockimg" />
+                    </button>
+                    <p class="font-bold text-center">
+                      Rock
+                    </p>
+                  </div>
+                  <div  onclick="start()" id="paper" class="choice shadow-black rounded-xl shadow-lg py-4 px-7 paper">
+                    <button>
+                      <img class="w-17" src="paper.png" alt="paperimg" />
+                    </button>
+                    <p class="font-bold text-center">
+                     paper
+                    </p>
+                  </div>
+                  <div onclick="start()" id="scissors" class="choice flex flex-col justify-center items-center rounded-xl shadow-black shadow-lg py-4.5 px-6  scissors">
+                    <button>
+                      <img class="w-14" src="scissors.png" alt="scissorimg" />
+                    </button>
+                    <p class="font-bold text-center" >
+                      scissors
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+       
+          <div id="animatecontainer" class="hidden">
+            <div id=" animate" class=" pt-10 font-bold animate flex flex-col justify-center items-center gap-10 ">
+              <div id="pvc" class="pvc">
+                <div class="pvcsmall flex justify-center font-bold items-center gap-15">
+                  <p>Player</p>
+                  <p>v/s</p>
+                  <p>Computer</p>
+                </div>
+                 
+              </div>
+              <div id="firstimg" class="weapons animate-ping w-30 ">
+               <div class="forflex flex justify-center gap-25 items-center">
+                <img class="rotate-90" src="rock.png" alt="">
+                <img class="-rotate-90" src="rock.png" alt="">
+               </div>
+              
+              </div>
+              <div id="lastimg" class=" weapons w-40 ">
+               <div class="forflex2 flex justify-center items-center gap-20">
+                <img id="playerchoice" class="" src="" alt="">
+                <img id="computerchoice" class="" src="" alt="">
+               </div>
+              
+               </div>
+              <div  class="result">
+               <p id="result" class="text-2xl text-center"></p>
+              </div>
+              <div onclick="reset()" id="playagain" class="playagain hidden shadow-black rounded-xl px-7 py-3 shadow-lg">
+               <p>Play Again !!</p>
+              </div>
+   
+             </div>
+          </div>
+         
+          <div class="score py-5 font-bold text-2xl flex justify-center gap-x-17">
+            <p>
+              Won : <span id="yourscore">0</span>
+            </p>
+            <p>
+              Lost : <span id="computerscore">0</span>
+            </p>
+            <p  >
+              Draw : <span id="drawscore">0</span>
+            </p>
+          </div>
+        </div>
+        <p class="font-bold italic">Made by Krrish❤️</p>
+     </div>
+      
+    </div>
+    
+    <script src="index.js" type="text/javascript" charset="utf-8">
+    </script>
+  </body>
+</html>
